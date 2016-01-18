@@ -4,26 +4,26 @@
 <form action="<?php echo adminurl('/operations/aircraft');?>" method="post">
 <dl>
 <dt>* Aircraft ICAO Code</dt>
-<dd><input class="form-control" name="icao" type="text" value="<?php echo $aircraft->icao; ?>" /></dd>
+<dd><input name="icao" type="text" value="<?php echo $aircraft->icao; ?>" /></dd>
 
 <dt>* Aircraft Name/Type (i.e B747-400)</dt>
-<dd><input class="form-control" name="name" type="text" value="<?php echo $aircraft->name; ?>" /></dd>
+<dd><input name="name" type="text" value="<?php echo $aircraft->name; ?>" /></dd>
 
 <dt>* Full Name (Boeing 747-400 Combi)</dt>
-<dd><input class="form-control" name="fullname" type="text"  value="<?php echo $aircraft->fullname; ?>" /></dd>
+<dd><input name="fullname" type="text"  value="<?php echo $aircraft->fullname; ?>" /></dd>
 
 <dt>* Aircraft Registration</dt>
-<dd><input class="form-control" name="registration" type="text"  value="<?php echo $aircraft->registration; ?>" />
+<dd><input name="registration" type="text"  value="<?php echo $aircraft->registration; ?>" />
 	<p>TIP: Place an X in the registration to denote an inactive aircraft</p>
 </dd>
 
 <dt>* Maximum Passengers</dt>
-<dd><input class="form-control" name="maxpax" type="text"  value="<?php echo $aircraft->maxpax; ?>" />
+<dd><input name="maxpax" type="text"  value="<?php echo $aircraft->maxpax; ?>" />
 	<p>The maximum number of passengers that can be flown on this aircraft, for passenger or charter flights</p>
 </dd>
 
 <dt>* Maximum Cargo</dt>
-<dd><input class="form-control" name="maxcargo" type="text"  value="<?php echo $aircraft->maxcargo; ?>" />
+<dd><input name="maxcargo" type="text"  value="<?php echo $aircraft->maxcargo; ?>" />
 	<p>The maximum cargo load of this aircraft in <?php echo Config::Get('CARGO_UNITS'); ?>, for cargo flights</p>
 </dd>
 
@@ -48,25 +48,25 @@
 </dd>
 
 <dt>Link to download aircraft</dt>
-<dd><input class="form-control" name="downloadlink" type="text"  value="<?php echo $aircraft->downloadlink; ?>" /></dd>
+<dd><input name="downloadlink" type="text"  value="<?php echo $aircraft->downloadlink; ?>" /></dd>
 
 <dt>Link to aircraft image</dt>
-<dd><input class="form-control" name="imagelink" type="text"  value="<?php echo $aircraft->imagelink; ?>" /></dd>
+<dd><input name="imagelink" type="text"  value="<?php echo $aircraft->imagelink; ?>" /></dd>
 
 <dt></dt>
 <dd>Some of this aircraft can be retrieved from <a href="http://www.airliners.net/aircraft-data/" target="_new">this site</a>.</dd>
 <dt>Range</dt>
-<dd><input class="form-control" name="range" type="text"   value="<?php echo $aircraft->range; ?>" /></dd>
+<dd><input name="range" type="text"   value="<?php echo $aircraft->range; ?>" /></dd>
 
 <dt>Weight</dt>
-<dd><input class="form-control" name="weight" type="text" value="<?php echo $aircraft->weight; ?>" /></dd>
+<dd><input name="weight" type="text" value="<?php echo $aircraft->weight; ?>" /></dd>
 
 <dt>Cruise</dt>
-<dd><input class="form-control" name="cruise" type="text"  value="<?php echo $aircraft->cruise; ?>" /></dd>
+<dd><input name="cruise" type="text"  value="<?php echo $aircraft->cruise; ?>" /></dd>
 
 <dt>Minimum Rank Required to fly</dt>
 <dd>
-	<select class="form-control" name="minrank">
+	<select name="minrank">
 		<option value="0" <?php if($aircraft->minrank == 0){ echo 'selected'; } ?>>None</option>
 		<?php
 		foreach($allranks as $rank)
@@ -90,7 +90,7 @@
 <dt></dt>
 <dd><input type="hidden" name="id" value="<?php echo $aircraft->id;?>" />
 	<input type="hidden" name="action" value="<?php echo $action;?>" />
-	<input type="submit" class="btn btn-info" name="submit" value="<?php echo $title;?>" />
+	<input type="submit" name="submit" value="<?php echo $title;?>" />
 </dd>
 </dl>
 </form>
