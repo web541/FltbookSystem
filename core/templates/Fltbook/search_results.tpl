@@ -8,6 +8,16 @@ $last_name = OperationsData::getAirportInfo($last_location->arricao);
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
+<script type="text/javascript" src="<?php echo fileurl('lib/js/jquery.dataTables.js');?>"></script>
+<script type="text/javascript" src="<?php echo fileurl('lib/js/datatables.js');?>"></script>
+<script type="text/javascript" src="<?php echo fileurl('lib/js/dataTables.bootstrap.min.js');?>"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+	$('#tabledlist').dataTable( {
+  "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
+} )});
+</script>
+
 <!-- Latest compiled and minified JavaScript - Modified to clear modal on data-dismiss -->
 <script type="text/javascript" src="<?php echo SITE_URL;?>/lib/js/bootstrap.js"></script>
 
