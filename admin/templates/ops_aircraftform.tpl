@@ -28,7 +28,7 @@
 
 <dt>Select Airline</dt>
 <dd>
-    <select class="form-control" name="airline">
+    <select name="airline">
         <option value="" selected disabled>Select Airline</option>
         <?php
        	
