@@ -29,21 +29,23 @@
 
 <dt>Select Airline</dt>
 <dd>
-	<select name="airline">
-		<option value="" selected disabled>Select Airline</option>
-		<?php
-        
-        if($aircraft->airline == $airline->code)
-            $sel = 'selected="selected"';
-        else
-            $sel = '';
+    <select name="airline">
+        <option value="" selected disabled>Select Airline</option>
+        <?php
+       	
         $allairlines = OperationsData::getAllAirlines(true);
-		foreach($allairlines as $airline)
-		{
-			echo "<option value=\"{$airline->code}\" {$sel} >{$airline->code} - {$airline->name}</option>";
-		}
-		?>
-	</select>
+        foreach($allairlines as $airline)
+        {
+            $airlineicao = $_GET['icao'];
+            if($airlineicao == $airline->code)
+                $sel = 'selected="selected"';
+            else
+                $sel = '';
+            
+            echo "<option value=\"{$airline->code}\" {$sel} >{$airline->code} - {$airline->name}</option>";
+        }
+        ?>
+    </select>
 
 </dd>
 
