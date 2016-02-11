@@ -3,7 +3,7 @@ class FltbookData extends CodonData {
 
 	public static function findschedules($arricao, $depicao, $airline, $aircraft)   
 	{
-	        $query = "SELECT phpvms_schedules.*, phpvms_aircraft.name AS aircraft, phpvms_aircraft.registration
+	        $query = "SELECT phpvms_schedules.*, phpvms_aircraft.name AS aircraft, phpvms_aircraft.icao AS aircrafticao, phpvms_aircraft.registration
 	               FROM phpvms_schedules, phpvms_aircraft
 	                WHERE phpvms_schedules.depicao LIKE '$depicao'
 	                AND phpvms_schedules.arricao LIKE '$arricao'
@@ -13,7 +13,7 @@ class FltbookData extends CodonData {
 			AND phpvms_schedules.enabled = '1'
 			ORDER BY phpvms_schedules.code ASC, phpvms_schedules.flightnum ASC";
 			
-	        return DB::get_results($query);
+	        	return DB::get_results($query);
     	}
       
 	public static function findschedule($arricao, $depicao, $airline)   
