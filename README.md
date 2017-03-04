@@ -1,10 +1,11 @@
 # Fltbook-System
 A redesigned phpVMS Module modified to allow pilots to select their own aircraft prior to booking a flight.
 
+NOTE: Deprecated Repository, see updated version => https://github.com/web541/phpVMS-FltbookSystem-v2
 --------------------
 NOTICE: Majority of the code has originated from it's owners on the phpvms forums and has been compiled by Web541
 
-	FrontSchedules - Simpilot
+    FrontSchedules - Simpilot
     RealScheduleLite - Simpilot
     FlightBookingSystem - Parkho
     
